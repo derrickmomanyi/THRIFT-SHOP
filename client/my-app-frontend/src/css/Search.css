@@ -1,0 +1,8 @@
+.ui.icon.input {
+    background-color: orange;
+    top: 50%;
+    left: 45%;
+    margin-top: 25px;
+    transform: translate(-50%, -50%)
+    
+}

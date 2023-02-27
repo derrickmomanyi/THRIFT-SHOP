@@ -1,0 +1,22 @@
+.ui.form {
+    background-image: url(https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?w=2000);
+    background-size: "cover";
+    height: 100vh;
+        
+    background-repeat:no-repeat;
+}
+
+.four.wide.field {
+    position: absolute;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%, -50%)
+}
+
+.form {
+    
+        width: 50%;
+        height: 400%;
+        margin-left: 25%;
+   
+}
