@@ -5,25 +5,10 @@
       "title": "Mens Slim Fit T-Shirts ",
       "price": 22.3,
       "description": "Slim-fitting style, contrast raglan long sleeve",
+      "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 4,
-          "comment": "Loved the packaging.",
-          "user": {
-            "name": "Derrick"
-          }
-        },
-        {
-          "id": 2,
-          "rating": 3,
-          "comment": "Delayed delivery.",
-          "user": {
-            "name": "Hillary"
-          }
-        }
-      ]
+      "comment": "Loved packaging.",
+      "rating": 4
     },
     {
       "id": 2,
@@ -32,76 +17,28 @@
       "description": "The color could be slightly different between on screen and in practice.",
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 4,
-          "comment": "Loved the fitting.",
-          "user": {
-            "name": "Irene"
-          }
-        },
-        {
-          "id": 2,
-          "rating": 2.5,
-          "comment": "Was oversize.",
-          "user": {
-            "name": "Cosmas"
-          }
-        }
-      ]
+      "comment": "Loved fitting.",
+      "rating": 2.5
     },
     {
       "id": 3,
       "title": "Mens Cotton Jacket",
       "price": 55.99,
       "description": "Great outerwear jackets for Spring/Autumn/Winter",
-      "category": "men's clothing",
+      "category": "mens clothing",
       "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 4,
-          "comment": "Loved the service.",
-          "user": {
-            "name": "Miss Gladys"
-          }
-        },
-        {
-          "id": 2,
-          "rating": 1,
-          "comment": "Delivered wrong colour.",
-          "user": {
-            "name": "Chris"
-          }
-        }
-      ]
+      "comment": "Loved fit.",
+      "rating": "4"
     },
     {
       "id": 4,
       "title": "Snowboard Winter Coats",
       "price": 56.99,
       "description": " Skin Friendly, keep you warm in cold weather.",
-      "category": "women's clothing",
+      "category": "womens clothing",
       "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 4.8,
-          "comment": "Got perfect fit.",
-          "user": {
-            "name": "Alice"
-          }
-        },
-        {
-          "id": 2,
-          "rating": 2,
-          "comment": "Had light material.",
-          "user": {
-            "name": "Clifford"
-          }
-        }
-      ]
+      "comment": "Perfect fit.",
+      "rating": 4.8
     },
     {
       "id": 5,
@@ -110,24 +47,8 @@
       "description": " Faux leather material for style and comfort ",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 4.5,
-          "comment": "Highly recommend.",
-          "user": {
-            "name": "Damaris"
-          }
-        },
-        {
-          "id": 2,
-          "rating": 5,
-          "comment": "Perfect fit.",
-          "user": {
-            "name": "David"
-          }
-        }
-      ]
+      "comment": "Highly recommend.",
+      "rating": 4.5
     },
     {
       "id": 6,
@@ -136,24 +57,8 @@
       "description": " Lightweight fabric with great stretch for comfort",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 5,
-          "comment": "Got a gift.",
-          "user": {
-            "name": "Esther"
-          }
-        },
-        {
-          "id": 2,
-          "rating": 3,
-          "comment": "Not what I wanted.",
-          "user": {
-            "name": "Ricky"
-          }
-        }
-      ]
+      "comment": "Got a gift.",
+      "rating": 5
     },
     {
       "id": 7,
@@ -162,24 +67,8 @@
       "description": "Machine Wash & Pre Shrunk for a Great Fit",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 4.3,
-          "comment": "Loved the touch.",
-          "user": {
-            "name": "Miss Elijoy"
-          }
-        },
-        {
-          "id": 2,
-          "rating": 5,
-          "comment": "Loved it.",
-          "user": {
-            "name": "Derrick"
-          }
-        }
-      ]
+      "comment": "Loved fit.",
+      "rating": 4.3
     },
     {
       "id": 8,
@@ -188,24 +77,18 @@
       "description": "The fabric is soft and has some stretch.",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
-      "reviews": [
-        {
-          "id": 1,
-          "rating": 2.7,
-          "comment": "Was overstretching.",
-          "user": {
-            "name": "Miss Shantel"
-          }
-        },
-        {
-          "id": 2,
-          "rating": 3.5,
-          "comment": "Too light.",
-          "user": {
-            "name": "Frank"
-          }
-        }
-      ]
+      "comment": "Too light.",
+      "rating": 3.5
+    },
+    {
+      "title": "weww",
+      "price": "200",
+      "description": "Ya Kuvaa",
+      "category": "Men's Clothing",
+      "image": "https://www.wipo.int/export/sites/www/wipo_magazine/images/en/2020/2020_03_art_5_5_845.jpg",
+      "comment": "Perfect",
+      "rating": "4",
+      "id": 9
     }
   ]
 }

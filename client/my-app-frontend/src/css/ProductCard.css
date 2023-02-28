@@ -26,3 +26,29 @@
 .total {
   margin-left: 43%;
 }
+
+.pop-up-container{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:rgb(0, 0, 0, 0.7);
+  padding-top: 15%;
+  z-index: 1000;
+}
+
+.pop-up-body {
+  width: 70%;
+  height: 70.5%;
+  background-color: #fff;
+  margin: auto;
+  
+}
+
+.pop-up-header {
+  width: 100%;
+  text-align: right;
+}
+
+

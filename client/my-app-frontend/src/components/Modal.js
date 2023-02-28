@@ -29,6 +29,7 @@ function Modal({ratings, price, title, image, description, comments, pop, onHand
      })
      .then((resp)=> resp.json())
      .then((review)=> onEditReview(review))
+     alert("successfully updated review")
 
 
   }
@@ -49,8 +50,7 @@ function Modal({ratings, price, title, image, description, comments, pop, onHand
                     <img className="card-img-top" src={image} alt={title}/>
                         <div className="card-body">
                           <h5 className="card-title">{title}</h5>
-                          <p>{description}</p>
-                          
+                                                    
                         </div>
                         <ul className="list-group list-group-flush">  
                           <li className="list-group-item">Price: Ksh {price}</li>
