@@ -3,9 +3,8 @@ import ProductCard from './ProductCard';
 import "../css/ProductList.css"
 
 
-function ProductList({products, search, handleClick, onHandleDelete, onEditReview}){ 
-  console.log(products)
-  
+function ProductList({products, search, handleClick, onHandleDelete, handleAddNewReview}){ 
+   
       
     const displayProducts = products
     
@@ -22,11 +21,12 @@ function ProductList({products, search, handleClick, onHandleDelete, onEditRevie
     description = {product.description}
     category = {product.category}
     image = {product.image}
-    rating = {product.rating}
+    reviews = {product.reviews}
     handleClick = {handleClick}
     onHandleDelete = {onHandleDelete}
     product = {product}
-    onEditReview = {onEditReview}
+    handleAddNewReview = {handleAddNewReview}
+    
       
     
      

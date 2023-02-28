@@ -1,41 +1,44 @@
 import React, {useState} from "react";
 import "../css/Modal.css"
 
-function Modal({ratings, price, title, image, description, comments, pop, onHandleDelete, onEditReview}){
+function Modal({id, price, title, image, reviews, pop, onHandleDelete, handleAddNewReview}){
   
-
+  
   const [comment , setComment] = useState('') 
   const [rating , setRating] = useState('')
+ 
 
+
+  
   
   const handleSubmit = (e) =>{
      e.preventDefault()
-    const editReview = {           
-      
-      comment: comment,                 
-      rating: rating,
-     
-  }
+    const reviewData = {comment: comment,rating: rating, product_id: id}
   
-  fetch(`http://localhost:8002/products/${pop.id}`, {
+  fetch(`http://localhost:9292/reviews`, {
 
-        method:'PATCH',
+        method:'POST',
 
         headers: {
             'Content-Type' : 'application/json'
         },
 
-        body:JSON.stringify(editReview),
+        body:JSON.stringify(reviewData),
      })
      .then((resp)=> resp.json())
-     .then((review)=> onEditReview(review))
-     alert("successfully updated review")
+     .then((newReview)=> {
+      handleAddNewReview(newReview);
+      setComment('')
+      setRating('')
+    
+    })
+     alert("successfully created review")
 
 
   }
 
   function handleDelete(id){
-    fetch(`http://localhost:8002/products/${pop.id}`, {
+    fetch(`http://localhost:9292/products/${pop.id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -55,7 +58,7 @@ function Modal({ratings, price, title, image, description, comments, pop, onHand
                         <ul className="list-group list-group-flush">  
                           <li className="list-group-item">Price: Ksh {price}</li>
                           
-                          <li className="list-group-item">Rating: {ratings}/5</li>
+                          <li className="list-group-item">Rating: {reviews.map((review) => review.rating )}/5</li>
                           </ul>
                     
                   </div>
@@ -65,7 +68,7 @@ function Modal({ratings, price, title, image, description, comments, pop, onHand
               
               <ul className="list-group list-group-flush">
 
-              <li className="list-group-item">Top Review: {comments} </li>                                 
+              <li className="list-group-item">Top Review: {reviews.map((review) => review.comment )} </li>                                 
                </ul>
       </div>
       <div className="popup-form">
@@ -97,7 +100,7 @@ function Modal({ratings, price, title, image, description, comments, pop, onHand
                    onChange ={(e) => setRating(e.target.value)}/>
                </div>
        
-               <button type="submit" className="ui mini blue button">Edit Review</button>
+               <button type="submit" className="ui mini blue button">Add Review</button>
                </form>
                        
                        </div>

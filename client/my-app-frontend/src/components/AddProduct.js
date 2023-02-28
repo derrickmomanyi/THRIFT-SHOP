@@ -11,13 +11,9 @@ function AddProduct({ addNewProduct }){
     const [price , setPrice] = useState('')
     const [image, setImage] = useState('')    
     const [description , setDescription] = useState('')
-    const [category , setCategory] = useState('')
-    const [rating , setRating] = useState('')
-    const [comment, setComment] = useState('')
-       
+    const [category , setCategory] = useState('')      
    
      
-    
      const handleSubmit = (e) =>{
         e.preventDefault()
 
@@ -27,13 +23,11 @@ function AddProduct({ addNewProduct }){
             price: price,
             description: description,
             category: category,
-            image: image, 
-            comment: comment,          
-            rating: rating,
+            image: image
            
         }
 
-        fetch(' http://localhost:8002/products', {
+        fetch('http://localhost:9292/products', {
 
         method:'POST',
 
@@ -51,10 +45,9 @@ function AddProduct({ addNewProduct }){
      setCategory('')
      setDescription('')
      setImage('')
-     setPrice('')
-     setRating('')
+     setPrice('')    
      setTitle('')
-     setComment('')
+     
 
     }
 
@@ -103,27 +96,6 @@ function AddProduct({ addNewProduct }){
             className="form-control"
              placeholder="Enter Image Link" 
              onChange ={(e) => setImage(e.target.value)}/>
-        </div>
-
-        <div className="form-group">
-            <label>Review</label>
-            <input type="text" 
-            name ='comment'
-             value = {comment} 
-             className="form-control" 
-             placeholder="Enter Product Review" 
-             onChange ={(e) => setComment(e.target.value)}/>
-        </div>
-
-        <div className="form-group">
-            <label>Rating</label>
-            <input type="number" 
-            name ='rating' 
-            value = {rating} 
-            className="form-control" 
-            placeholder="Enter Rating" 
-            step = '0.1' 
-            onChange ={(e) => setRating(e.target.value)}/>
         </div>
 
         <div>

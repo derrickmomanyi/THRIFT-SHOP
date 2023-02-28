@@ -6,16 +6,18 @@ import "../css/ProductCard.css"
 
 
 
-function ProductCard({ title, price, image,  description, category, rating, product, handleClick, onHandleDelete, onEditReview}){
+function ProductCard({ title, price, image,  description, category, reviews, product, handleClick, onHandleDelete, handleAddNewReview}){
 
       const [popup, setPopup] = useState([]);      
       const [popupToggle, setPopupToggle] = useState(false)
+
 
       const changeContent = (product) => {
           setPopup([product])
           setPopupToggle(!popupToggle)
       }
-      
+
+   
       
     return (
         <>      
@@ -29,7 +31,7 @@ function ProductCard({ title, price, image,  description, category, rating, prod
                 <ul className="list-group list-group-flush">  
                   <li className="list-group-item">Price: Ksh {price}</li>
                   <li className="list-group-item">Section: {category}</li>
-                  <li className="list-group-item">Rating: {rating}/5</li>
+                  <li className="list-group-item">Rating: {reviews.map((review) => review.rating )}/5</li>
                   <li className="list-group-item">
                     <button className='ui mini orange button' onClick = {()=>changeContent(product)}>Reviews</button>
                   </li>
@@ -52,15 +54,15 @@ function ProductCard({ title, price, image,  description, category, rating, prod
                             return(
                              <Modal 
                              key = {pop.id}
+                             id = {pop.id}
                              title = {pop.title}
-                             price = {pop.price}
-                             ratings = {pop.rating}
-                             comments = {pop.comment}
+                             price = {pop.price}                            
                              image = {pop.image}
                              description = {pop.description}  
-                             onHandleDelete = {onHandleDelete}
-                             onEditReview = {onEditReview}                           
+                             onHandleDelete = {onHandleDelete}                                                        
                              pop = {pop}
+                             reviews = {reviews}
+                             handleAddNewReview = {handleAddNewReview}
                              />
                             );
                           })}

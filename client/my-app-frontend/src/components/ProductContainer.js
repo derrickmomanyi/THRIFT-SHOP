@@ -13,18 +13,21 @@ function ProductContainer({handleClick}){
 
   
   const [products, setProducts] = useState([])  
-  const [search, setSearch] = useState("") 
+  const [search, setSearch] = useState("")   
    const navigate = useNavigate();
   
 
 
+
   useEffect(() => {
-    fetch("http://localhost:8002/products")
+    fetch("http://localhost:9292/products/11")
     .then((res) => res.json())
     .then((products) => setProducts(products))
   }, [])
 
-  console.log(products);
+  function handleAddNewReview(newReview){
+    setProducts([...products, newReview])
+  }
 
   const addNewProduct = (newProduct)  => {
     const updatedProduct = [...products, newProduct]
@@ -37,25 +40,25 @@ function ProductContainer({handleClick}){
     setProducts(updatedProduct);  
     }
 
-    function onEditReview(review) {
-      const updatedProduct = products.map((product) => {
-        if (review.id === products.id){
-        return review
-      }
-      else {
-        return product
-       }
-      })   
-     setProducts(updatedProduct)
+    // function onEditReview(review) {
+    //   const updatedProduct = products.map((product) => {
+    //     if (review.id === products.id){
+    //     return review
+    //   }
+    //   else {
+    //     return product
+    //    }
+    //   })   
+    //  setProducts(updatedProduct)
     
-    }
+    // }
  
  
     return(
         <>
          
         <Search search = {search} setSearch = {setSearch}/>               
-        <ProductList products = {products} search = {search} handleClick = {handleClick} onHandleDelete = {onHandleDelete} onEditReview = {onEditReview}/>            
+        <ProductList products = {products} search = {search} handleClick = {handleClick} onHandleDelete = {onHandleDelete} handleAddNewReview = {handleAddNewReview}/>            
         <button className = "btn" onClick={() => navigate("/addproduct", <AddProduct addNewProduct = {addNewProduct} />)}>Go to Add Product</button>         
         
         

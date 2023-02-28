@@ -5,7 +5,7 @@ puts "🌱 Seeding spices..."
 puts "Deleting old data..."
 Product.destroy_all
 Review.destroy_all
-User.destroy_all
+
 
 
 
@@ -75,29 +75,22 @@ product9 = Product.create(
     image: "https://www.wipo.int/export/sites/www/wipo_magazine/images/en/2020/2020_03_art_5_5_845.jpg")
 
 
-puts "Creating users..."
-user1 = User.create(name: "Derrick")
-user2 = User.create(name: "Momanyi")
-user3 = User.create(name: "Hillary")
 
 puts "Creating reviews..."
 
-review1 = Review.create(rating: 4, comment: "Loved packaging.", product_id: product1.id, user_id: user1.id)
-review2 = Review.create(rating: 4.2, comment: "Loved fitting.", product_id: product2.id, user_id: user1.id)
-review3 = Review.create(rating: 3.5, comment: "Loved fit.", product_id: product3.id, user_id: user2.id)
-review4 = Review.create(rating: 4.7, comment: "Perfect fit.", product_id: product4.id, user_id: user2.id)
-review5 = Review.create(rating: 3.9, comment: "Loved service.", product_id: product5.id, user_id: user3.id)
-review6 = Review.create(rating: 2.5, comment: "Highly recommend.", product_id: product6.id, user_id: user3.id)
-review7 = Review.create(rating: 3.8, comment: "Time saving.", product_id: product7.id, user_id: user1.id)
-review8 = Review.create(rating: 5, comment: "Perfect clothing.", product_id: product8.id, user_id: user2.id)
-review9 = Review.create(rating: 4.1, comment: "Good customer service.", product_id: product9.id, user_id: user3.id)
+review1 = Review.create(rating: 4, comment: "Loved packaging.", product_id: product1.id)
+review2 = Review.create(rating: 4.2, comment: "Loved fitting.", product_id: product2.id)
+review3 = Review.create(rating: 3.5, comment: "Loved fit.", product_id: product3.id)
+review4 = Review.create(rating: 4.7, comment: "Perfect fit.", product_id: product4.id)
+review5 = Review.create(rating: 3.9, comment: "Loved service.", product_id: product5.id)
+review6 = Review.create(rating: 2.5, comment: "Highly recommend.", product_id: product6.id)
+review7 = Review.create(rating: 3.8, comment: "Time saving.", product_id: product7.id)
+review8 = Review.create(rating: 5, comment: "Perfect clothing.", product_id: product8.id)
+review9 = Review.create(rating: 4.1, comment: "Good customer service.", product_id: product9.id)
 
 
 
 
-
-
-# review5 = Review.create(rating: 5, comment: Faker::Lorem.sentence, user_id: user2.id, product_id: product4.id)
 
 
 puts "Seeding done!"
