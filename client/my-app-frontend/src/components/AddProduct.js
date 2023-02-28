@@ -1,5 +1,4 @@
-//component to add products to json
-//Gloria
+
 
 import React, {useState} from 'react'
 import "../css/AddProduct.css"
@@ -14,6 +13,7 @@ function AddProduct({ addNewProduct }){
     const [description , setDescription] = useState('')
     const [category , setCategory] = useState('')
     const [rating , setRating] = useState('')
+    const [comment, setComment] = useState('')
        
    
      
@@ -27,12 +27,13 @@ function AddProduct({ addNewProduct }){
             price: price,
             description: description,
             category: category,
-            image: image,           
+            image: image, 
+            comment: comment,          
             rating: rating,
            
         }
 
-        fetch('  http://localhost:8002/products', {
+        fetch(' http://localhost:8002/products', {
 
         method:'POST',
 
@@ -53,6 +54,7 @@ function AddProduct({ addNewProduct }){
      setPrice('')
      setRating('')
      setTitle('')
+     setComment('')
 
     }
 
@@ -101,6 +103,16 @@ function AddProduct({ addNewProduct }){
             className="form-control"
              placeholder="Enter Image Link" 
              onChange ={(e) => setImage(e.target.value)}/>
+        </div>
+
+        <div className="form-group">
+            <label>Review</label>
+            <input type="text" 
+            name ='comment'
+             value = {comment} 
+             className="form-control" 
+             placeholder="Enter Product Review" 
+             onChange ={(e) => setComment(e.target.value)}/>
         </div>
 
         <div className="form-group">

@@ -3,14 +3,14 @@ import ProductCard from './ProductCard';
 import "../css/ProductList.css"
 
 
-function ProductList({products, search, handleClick}){ 
+function ProductList({products, search, handleClick, onHandleDelete, onEditReview}){ 
   console.log(products)
   
       
     const displayProducts = products
     
     .filter((product) => 
-        product.title.toLowerCase().includes(search.toLowerCase())
+        product.title.toLowerCase().includes(search.toLowerCase()) || product.category.toLowerCase().includes(search.toLowerCase())
     )
     
     
@@ -22,9 +22,11 @@ function ProductList({products, search, handleClick}){
     description = {product.description}
     category = {product.category}
     image = {product.image}
-    reviews = {product.reviews}
+    rating = {product.rating}
     handleClick = {handleClick}
+    onHandleDelete = {onHandleDelete}
     product = {product}
+    onEditReview = {onEditReview}
       
     
      

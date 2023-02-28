@@ -8,7 +8,7 @@ function Search({search, setSearch}){
         
       <div className="ui icon input">
           <input type= "text"
-          placeholder="Search Product by Name"
+          placeholder="Search by Name or Category"
           onChange = {(e)=> setSearch(e.target.value)}
           value= {search}
           />
