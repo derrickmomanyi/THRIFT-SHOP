@@ -104,21 +104,19 @@ function AddProduct({ addNewProduct }){
 
         <div>
         <label className="mr-sm-2" >Category</label>
-        <select className="custom-select mr-sm-2"  id="inlineFormCustomSelect"
-        onChange ={(e) => setCategory(e.target.value)}
-        name ='category' 
-        value = {category} 
-        >
-        <option >Choose...</option>
-        <option value="Men's Clothing">mens Clothing</option>
-        <option value="Women's Clothing">womens Clothing</option>
+            <select className="custom-select mr-sm-2"  id="inlineFormCustomSelect"
+            onChange ={(e) => setCategory(e.target.value)}
+            name ='category' 
+            value = {category} 
+                >
+                <option >Choose...</option>
+                <option value="Men's Clothing">mens Clothing</option>
+                <option value="Women's Clothing">womens Clothing</option>
         
-      </select>
+           </select>
           
         </div>
 
-
-        
         <button type="submit" className="btn btn-primary">Submit</button>
         </form>
                 
