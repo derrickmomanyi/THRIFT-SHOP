@@ -25,7 +25,6 @@ function ProductContainer({handleClick}){
       .then((products) => setProducts(products))
     }, [])
 
-  
     
     const addNewProduct = (newProduct)  => {
       const updatedProduct = [...products, newProduct]
@@ -40,7 +39,6 @@ function ProductContainer({handleClick}){
    
      })
      setReviews(updatedReview)
-     
      } 
 
      const addReview = (newReview) => {

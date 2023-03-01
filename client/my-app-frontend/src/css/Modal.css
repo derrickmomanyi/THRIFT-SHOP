@@ -2,13 +2,13 @@
     margin-right: 80%;
     margin-bottom: 10%;
     position: absolute;
-    top: 230px;
+    top: 260px;
     
 }
 
 .popup-form{
     margin-left: 70%;
-    margin-top: -6%;
+    margin-top: -25%;
 }
 
 .popup-list {
@@ -20,7 +20,7 @@
 
 .ui.mini.brown.button {
     margin-left: 30%;
-    margin-right: 20%;
+    
     
     
 }
@@ -28,4 +28,10 @@
 .popup-btn{
     margin-top: 15%;
     margin-left: 43%;
+}
+
+.ui.mini.yellow.button{
+    margin-left: -2%;
+    margin-top: 55%;
+    
 }

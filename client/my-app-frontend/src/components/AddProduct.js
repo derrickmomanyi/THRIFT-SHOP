@@ -59,6 +59,7 @@ function AddProduct({ addNewProduct }){
 
             <label>Title</label>
             <input type="text" 
+            required
             name ='title' 
             value = {title}
              className="form-control" 
@@ -70,6 +71,7 @@ function AddProduct({ addNewProduct }){
         <div className="form-group">
             <label>Price</label>
             <input type="number"
+            required
              name ='price'
               value = {price}
                className="form-control"
@@ -80,6 +82,7 @@ function AddProduct({ addNewProduct }){
         <div className="form-group">
             <label>Description</label>
             <input type="text" 
+            required
             name ='description'
              value = {description} 
              className="form-control" 
@@ -91,6 +94,7 @@ function AddProduct({ addNewProduct }){
         <div className="form-group">
             <label>Image</label>
             <input type="text" 
+            required
             name ='image' 
             value = {image} 
             className="form-control"
@@ -103,7 +107,8 @@ function AddProduct({ addNewProduct }){
         <select className="custom-select mr-sm-2"  id="inlineFormCustomSelect"
         onChange ={(e) => setCategory(e.target.value)}
         name ='category' 
-        value = {category}  >
+        value = {category} 
+        >
         <option >Choose...</option>
         <option value="Men's Clothing">mens Clothing</option>
         <option value="Women's Clothing">womens Clothing</option>

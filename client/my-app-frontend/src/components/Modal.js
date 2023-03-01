@@ -9,6 +9,7 @@ function Modal({id, price, description, title, image, pop, onHandleDelete, editR
   const [newRating, setNewRating] = useState('')
 
 
+
   const handleAddReview = (e)=> {
       e.preventDefault()
     const reviewData = {comment: newComment,rating: newRating, product_id : id}
@@ -94,7 +95,7 @@ function Modal({id, price, description, title, image, pop, onHandleDelete, editR
                     <img className="card-img-top" src={image} alt={title}/>
                         <div className="card-body">
                           <h5 className="card-title">{title}</h5>
-                          <p>{description}</p>
+                         
                                                     
                         </div>
                         <ul className="list-group list-group-flush">  
@@ -117,13 +118,17 @@ function Modal({id, price, description, title, image, pop, onHandleDelete, editR
               <ul className="list-group list-group-flush">
 
               <li className="list-group-item">Top Review: {rev.map(function(review){
-                            if (review.id === id){
+                              if (review.id === id){
                               return review.comment
-                            }
-                          })} 
+                                  }
+                                })}
                           <button className="ui mini brown button" type="button" onClick={() => deleteReview(id)}>Delete</button>
                           </li>                                 
                </ul>
+
+               <div className="popup-btn">
+      <button className="ui mini yellow button" onClick={() => deleteProduct(id)}>Delete Product</button>      
+      </div>      
       </div>
       <div className="popup-form">
 
@@ -134,7 +139,8 @@ function Modal({id, price, description, title, image, pop, onHandleDelete, editR
                <div className="form-group">
        
                    <label>Comment</label>
-                   <input type="text" 
+                   <input type="text"
+                   required 
                    name ='comment' 
                    value = {newComment}
                     className="form-control" 
@@ -147,6 +153,7 @@ function Modal({id, price, description, title, image, pop, onHandleDelete, editR
                <div className="form-group">
                    <label>Rating</label>
                    <input type="number" 
+                   required
                    name ='rating' 
                    value = {newRating} 
                    className="form-control" 
@@ -168,6 +175,7 @@ function Modal({id, price, description, title, image, pop, onHandleDelete, editR
        
                    <label>Comment</label>
                    <input type="text" 
+                   required
                    name ='comment' 
                    value = {comment}
                     className="form-control" 
@@ -180,6 +188,7 @@ function Modal({id, price, description, title, image, pop, onHandleDelete, editR
                <div className="form-group">
                    <label>Rating</label>
                    <input type="number" 
+                   required
                    name ='rating' 
                    value = {rating} 
                    className="form-control" 
@@ -190,12 +199,10 @@ function Modal({id, price, description, title, image, pop, onHandleDelete, editR
        
                <button type="submit" className="ui mini blue button">Edit Review</button>
                </form>
-                       
+                    
         </div>
       </div>
-      <div className="popup-btn">
-      <button className="ui mini brown button" onClick={() => deleteProduct(id)}>Delete Product</button>      
-      </div>
+      
 </div>
 
 

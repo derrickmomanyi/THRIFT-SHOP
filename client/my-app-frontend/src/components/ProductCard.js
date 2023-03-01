@@ -50,7 +50,7 @@ import "../css/ProductCard.css"
                               title = {pop.title}
                               price = {pop.price}                            
                               image = {pop.image}
-                              description = {pop.description}  
+                              description = {pop.description}                               
                               onHandleDelete = {onHandleDelete}                                                                                
                               pop = {pop}       
                               editReview = {editReview} 
