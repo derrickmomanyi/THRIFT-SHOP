@@ -35,7 +35,7 @@ function AddProduct({ addNewProduct }){
             'Content-Type' : 'application/json'
         },
 
-        body:JSON.stringify(newProduct),
+        body:JSON.stringify(newProduct)
      })
      
      .then((resp)=> resp.json())
@@ -105,8 +105,8 @@ function AddProduct({ addNewProduct }){
         name ='category' 
         value = {category}  >
         <option >Choose...</option>
-        <option value="Men's Clothing">Men's Clothing</option>
-        <option value="Women's Clothing">Women's Clothing</option>
+        <option value="Men's Clothing">mens Clothing</option>
+        <option value="Women's Clothing">womens Clothing</option>
         
       </select>
           
