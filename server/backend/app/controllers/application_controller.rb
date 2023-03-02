@@ -39,8 +39,7 @@ class ApplicationController < Sinatra::Base
   patch '/products/:id' do
     product = Product.find(params[:id])
     product.update(
-      comment: params[:comment],
-      rating: params[:rating]      
+      price: params[:price]
      
     )
     product.to_json
