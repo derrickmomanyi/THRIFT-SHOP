@@ -1,6 +1,65 @@
-# Project Task Management API
+# THRIFT SHOP APP
 
-This project management API is a simple web API where you make CRUD calls to a server to organize a project management app.
+This product app lets you organize products in cards.
+
+## Technologies Used In This App
+
+- JavaScript
+- React
+- Bootstrap
+- Semantic UI
+- Custom API Server
+
+
+## How To Use
+
+Install and run:
+
+```sh
+npm install
+
+# start up your server
+# start up react
+npm start
+
+```
+
+## Features
+
+### App
+
+- Add to cart
+- Remove from cart
+- Get cart total summary
+- Navigation shows app interface
+
+
+### Products
+
+- Create a product
+- Delete a product
+- Add a product
+- Search products through search bar
+- View individul products
+- Add or remove the quantity of products in your cart before purchase.
+
+
+### Reviews
+
+- Create a new review
+- Delete a current review
+- Update a review
+
+
+
+
+
+
+
+
+# THRIFT SHOP API
+
+This  API is a simple web API where you make CRUD calls to a server to organize aproduct shop App.
 
 ## Technologies Used in API
 

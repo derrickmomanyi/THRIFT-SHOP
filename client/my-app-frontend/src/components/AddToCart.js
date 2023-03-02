@@ -32,8 +32,7 @@ function AddToCart({setIsInCart, isInCart, handleChange}){
                       </div>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">Price: Ksh {product.price}</li>
-                            <li className="list-group-item">Section: {product.category}</li>
-                            <li className="list-group-item">Rating: {product.rating}/5</li>
+                            <li className="list-group-item">Section: {product.category}</li>                           
                         </ul>
                     <div className="card-body">
                       {(<div className='d-flex align-items-centre justify-content-centre' style={{gap: "0.5rem"}}> 
@@ -65,8 +64,8 @@ function AddToCart({setIsInCart, isInCart, handleChange}){
     
             </div>
             <div className="total">
-                    <h2 style={{color: "blue"}}>Cart Summary</h2>
-                    <h4 style={{color: "blue"}}>Subtotal: Kshs. {units}</h4>
+                    <h2 style={{color: "blue"}}>Checkout....</h2>
+                    <h4 style={{color: "blue"}}>Lipa: Kshs. {units}</h4>
             </div>
     </>
     )

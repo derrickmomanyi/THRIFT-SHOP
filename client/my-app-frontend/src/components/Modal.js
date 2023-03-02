@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "../css/Modal.css"
 
-function Modal({id, price, description, title, image, pop, onHandleDelete, editReview, rev, addReview, onReviewDelete}){
+function Modal({id, price, title, image, pop, onHandleDelete, editReview, rev, addReview, onReviewDelete}){
   
   const [comment , setComment] = useState('') 
   const [rating , setRating] = useState('')

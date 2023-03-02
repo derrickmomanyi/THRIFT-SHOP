@@ -42,7 +42,7 @@ function ProductContainer({handleClick}){
      } 
 
      const addReview = (newReview) => {
-      console.log(newReview);
+      
       const updatedReview = [...reviews, newReview]
       setReviews(updatedReview)
      }
