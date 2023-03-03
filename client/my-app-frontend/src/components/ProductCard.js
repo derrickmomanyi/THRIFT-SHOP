@@ -71,3 +71,47 @@ import "../css/ProductCard.css"
   }
 
 export default ProductCard;
+
+
+
+// <div className="popup">
+// <div className="card" style={{width: "18rem"}}>
+//         <img className="card-img-top" src={image} alt={title}/>
+//             <div className="card-body">
+//               <h5 className="card-title">{title}</h5>
+             
+                                        
+//             </div>
+//             <ul className="list-group list-group-flush">  
+//               <li className="list-group-item">Price: Ksh {price}</li>
+              
+//               <li className="list-group-item" key ={rev.id}>Rating: {rev.map(function(review){
+//                 if (review.product_id === id){
+//                   return review.rating
+//                 }
+//               })
+//               }/5 </li>
+//               </ul>
+        
+//       </div>
+// </div>
+
+// <div className = "popup-list">   
+// <h4>Your Reviews</h4>    
+  
+//   <ul className="list-group list-group-flush">
+//   {rev.map(function(review){
+//                   if (review.product_id === id){
+//                   return  <li className="list-group-item" key ={review.id}>Your Review: {review.comment} 
+//                   <button className="ui mini brown button" type="button" onClick={() => deleteReview(id)}>Delete</button></li> 
+//                       }
+//                     })}
+ 
+              
+                                              
+//    </ul>
+
+//    <div className="popup-btn">
+// <button className="ui mini yellow button" onClick={() => deleteProduct(id)}>Delete Product</button>      
+// </div>      
+// </div>

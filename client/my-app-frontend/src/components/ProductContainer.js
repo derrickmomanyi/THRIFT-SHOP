@@ -12,7 +12,8 @@ function ProductContainer({handleClick}){
   const [products, setProducts] = useState([])
   const [search, setSearch] = useState("")   
   const navigate = useNavigate();
-  
+
+
   useEffect(() => {
     fetch("http://localhost:9292/reviews")
     .then((res) => res.json())

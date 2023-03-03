@@ -7,7 +7,7 @@ function Modal({id, price, title, image, pop, onHandleDelete, editReview, rev, a
   const [rating , setRating] = useState('')
   const [newComment, setNewComment] = useState('')
   const [newRating, setNewRating] = useState('')
-
+  const [disable, setDisable] = useState(0)
 
 
   const handleAddReview = (e)=> {
@@ -30,6 +30,7 @@ function Modal({id, price, title, image, pop, onHandleDelete, editReview, rev, a
      addReview(newReview);
       setNewComment('')
       setNewRating('')
+      setDisable(true)
       alert("successfully added review")
     })
      
@@ -162,7 +163,7 @@ function Modal({id, price, title, image, pop, onHandleDelete, editReview, rev, a
                    onChange ={(e) => setNewRating(e.target.value)}/>
                </div>
        
-               <button type="submit" className="ui mini purple button">Add Review</button>
+               <button type="submit" className="ui mini purple button" disabled ={disable}>Add Review</button>
                </form>
                        
                        </div>

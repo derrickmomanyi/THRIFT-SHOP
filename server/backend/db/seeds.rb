@@ -55,7 +55,7 @@ product6 = Product.create(
 
 product7 = Product.create( 
     title: "Women Short Sleeve ",
-    price: 7.95,
+    price: 700,
     description: "Machine Wash & Pre Shrunk for a Great Fit",
     category: "women clothing",
     image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg")
